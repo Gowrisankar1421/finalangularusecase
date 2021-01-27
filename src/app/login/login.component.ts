@@ -42,11 +42,13 @@ export class LoginComponent implements OnInit {
         if(this.user.type=='user'){
           this.currentUser.setUserData(this.user);
           this.user.active=true;
+          this.us.update(this.user.id,this.user).subscribe();
           this.router.navigate(['normaluser']);
         }
         if(this.user.type=='admin'){
           this.currentUser.setUserData(this.user);
           this.user.active=true;
+          this.us.update(this.user.id,this.user).subscribe();
           this.router.navigate(['admin']);
         }
         if((this.user.type!='user')&&(this.user.type!='admin')){
