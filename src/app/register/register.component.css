@@ -1,0 +1,13 @@
+h2{
+    
+    padding-bottom: 50px;
+    height: 75px;
+    width: 800px;
+    color: black;
+}
+label{
+    color:darkred;
+    width: 150px;
+    font-size: large;
+    font-weight: 500;
+}

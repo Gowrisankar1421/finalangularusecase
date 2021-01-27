@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand bg-light">
+    <div class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+        <a class="nav-item nav-link" (click)="navBack()" style="padding-top: 10px;background-color: lightgray;border-radius: 1em;">back</a>
+      </ul>
+    </div>
+    </nav>
+<h1>User Login List</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>User id</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>BankAccountNumber</th>
+            <th>Phone</th>
+            <th>Active</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.userName}}</td>
+            <td>{{user.password}}</td>
+            <td>{{user.bankAccountNumber}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.active}}</td>
+            <td>{{user.type}}</td>
+        </tr>
+    </tbody>
+</table>

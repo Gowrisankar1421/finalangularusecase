@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand bg-light">
+    <div class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+        <a class="nav-item nav-link" (click)="navBack()" style="padding-top: 10px;background-color: lightgray;border-radius: 1em;">back</a>
+      </ul>
+    </div>
+    </nav>
+    <nav class="navbar">
+        <input class="form-control" type="text" name="receiver" [(ngModel)]="receiver" (ngModelChange)="Search()"
+        placeholder="Enter receiver account number to search"> &nbsp;
+        <a style="cursor: pointer;background-color: rgb(3, 141, 3);border-radius: 0.5em;" (click)="exportexcel()" >
+            Mini Statement Download
+          </a>
+    </nav>
+    <div>
+    <table class="table table-bordered" id="fileName">
+        <thead>
+            <tr>
+                <th (click)="sort('id')">id&nbsp;<i class="fa fa-sort" style="color: black;"></i></th>
+                <th>Sender</th>
+                <th>Receiver</th>
+                <th (click)="sort('amount')">Amount&nbsp;<i class="fa fa-sort" style="color: black;"></i></th>
+                <th (click)="sort('transactionDate')">Transaction Date&nbsp;<i class="fa fa-sort" style="color: black;"></i></th>
+                <th>Transaction type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let transaction of transactions">
+                <td>{{transaction.id}}</td>
+                <td>{{transaction.sender}}</td>
+                <td>{{transaction.receiver}}</td>
+                <td>{{transaction.amount}}</td>
+                <td>{{transaction.transactionDate}}</td>
+                <td>{{transaction.type}}</td>
+            </tr>
+        </tbody>
+
+ 

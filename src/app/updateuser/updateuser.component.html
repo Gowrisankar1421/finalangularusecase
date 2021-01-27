@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand bg-light">
+    <div class="navbar-collapse collapse">
+      <ul class="navbar-nav mr-auto">
+          
+        <a class="nav-item nav-link" (click)="navBack()" style="padding-top: 10px;background-color: lightgray;border-radius: 1em;">back</a>
+      </ul>
+    </div>
+    </nav>
+<form (ngSubmit)="onUpdate()">
+    
+    <div class="form-group">
+        <label for="bankAccountNumber">Bank Account Number</label>
+        <input type="text" class="form-control" id="bankAccountNumber" required [(ngModel)]="user.bankAccountNumber" name="bankAccountNumber">
+    </div>
+    <div class="form-group">
+        <label for="balance">Balance</label>
+        <input type="number" class="form-control" id="balance" required [(ngModel)]="user.balance" name="balance">
+    </div>
+    
+    <div class="form-group">
+        <label for="type">Type</label>
+        <input type="text" class="form-control" id="type" required [(ngModel)]="user.type" name="type">
+    </div>
+    <button type="submit" class="btn btn-success">Update</button>
+</form>

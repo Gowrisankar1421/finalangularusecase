@@ -1,0 +1,58 @@
+<div class="container">
+    <div><h2 align ="center" style="color: black;">Hai {{user.userName}} , GS Online Banking Welcomes you</h2></div>
+    <div><nav class="navbar navbar-expand bg-light">
+        <div class="navbar-collapse collapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="details" >My Details</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="transaction">Transaction</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="account">Transaction History</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="alltransactions">All Users Transactions</a>
+            </li>
+          <a class="nav-item nav-link" (click)="logout()">Logout</a>
+        
+          </ul>
+        </div>
+      </nav></div><br><br><br>
+      <h3 style="color: black;">List of Users</h3>
+      <nav class="navbar">
+      <input class="form-control" type="text" name="userName" [(ngModel)]="userName" (ngModelChange)="Search()"
+      placeholder="Enter user name to search"> &nbsp;</nav>
+      <table class="table table-bordered">
+        <thead>
+            <tr>
+              <th> id</th>
+              <th>userName</th>
+              <th>bankAccountNumber</th>
+              <th>balance</th>
+              <th>phone</th>
+              <th>email</th>
+              <th>type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.id}}</td>
+                <td>{{user.userName}}</td>
+                <td>{{user.bankAccountNumber}}</td>
+                <td>{{user.balance}}</td>
+                <td>{{user.phone}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.type}}</td>
+                <div>
+                    <span class="btn btn-danger" (click)="editUser(user)" *ngIf='user.type==""'>Edit</span>
+                    <span class="btn btn-danger" (click)="deleteUser(user)">Delete</span>
+                    <span class="btn btn-info" (click)="viewUser(user)" *ngIf='!user.type==""'>View</span>
+                    <hr />
+                </div>
+            </tr>
+        </tbody>
+     
+    </table>
+</div>

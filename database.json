@@ -1,0 +1,234 @@
+{
+  "Users": [
+    {
+      "id": 1,
+      "userName": "gsp",
+      "password": "haigsp",
+      "bankAccountNumber": "5555A",
+      "balance": 98420,
+      "phone": 8795000555,
+      "email": "gsp@gmail.com",
+      "active": false,
+      "type": "admin"
+    },
+    {
+      "id": 2,
+      "userName": "sankar",
+      "password": "haisankar",
+      "bankAccountNumber": "123457A",
+      "balance": 86030,
+      "phone": 8795462132,
+      "email": "kgp@gmail.com",
+      "active": false,
+      "type": "user"
+    },
+    {
+      "id": 3,
+      "userName": "sai",
+      "password": "saikrishna",
+      "bankAccountNumber": "12546AB",
+      "balance": 37300,
+      "phone": 8954762103,
+      "email": "sai@gmail.com",
+      "active": false,
+      "type": "user"
+    },
+    {
+      "bankAccountNumber": "84652B",
+      "balance": 96240,
+      "active": false,
+      "type": "user",
+      "id": 4,
+      "userName": "sneha",
+      "password": "snehahai",
+      "email": "sneha@gmail.com",
+      "phone": "6854729130"
+    },
+    {
+      "email": "sree@gmail.com",
+      "userName": "sree",
+      "phone": "4789561230",
+      "password": "sreehai",
+      "active": false,
+      "type": "",
+      "bankAccountNumber": "",
+      "balance": 0,
+      "id": 6
+    },
+    {
+      "bankAccountNumber": "6514CF",
+      "balance": 25000,
+      "type": "user",
+      "id": 7,
+      "userName": "jai",
+      "password": "haijai",
+      "email": "jai@gmail.com",
+      "phone": "6985740321",
+      "active": false
+    }
+  ],
+  "Transactions": [
+    {
+      "sender": "5555A",
+      "receiver": "84652B",
+      "amount": 1000,
+      "transactionDate": "2020-11-12T17:42:18.898Z",
+      "id": 1,
+      "type": "debit",
+      "remarks": "debit succesfull and your balance is 125530"
+    },
+    {
+      "sender": "12546AB",
+      "receiver": "84652B",
+      "amount": 10000,
+      "transactionDate": "2020-11-12T17:42:18.898Z",
+      "id": 2,
+      "remarks": "debit succesfull and your balance is 37300",
+      "type": "debit"
+    },
+    {
+      "sender": "5555A",
+      "receiver": "12546AB",
+      "amount": 5000,
+      "transactionDate": "2020-12-02T17:42:18.898Z",
+      "id": 3,
+      "remarks": "debit succesfull and your balance is 120530",
+      "type": "debit"
+    },
+    {
+      "sender": "84652B",
+      "receiver": "84652B",
+      "amount": 6000,
+      "transactionDate": "2020-12-10T17:42:18.898Z",
+      "id": 4,
+      "remarks": "credit succesfull and your balance is 95250",
+      "type": "credit"
+    },
+    {
+      "sender": "5555A",
+      "receiver": "84652B",
+      "amount": 4000,
+      "transactionDate": "2020-12-20T17:42:18.898Z",
+      "id": 5,
+      "remarks": "debit succesfull and your balance is 116530",
+      "type": "debit"
+    },
+    {
+      "sender": "5555A",
+      "receiver": "84652B",
+      "amount": 1000,
+      "transactionDate": "2020-12-20T17:42:18.898Z",
+      "id": 6,
+      "remarks": "debit succesfull and your balance is 115530",
+      "type": "debit"
+    },
+    {
+      "sender": "5555A",
+      "receiver": "84652B",
+      "amount": 15000,
+      "transactionDate": "2021-01-05T17:42:18.898Z",
+      "id": 7,
+      "remarks": "debit succesfull and your balance is 100530",
+      "type": "debit"
+    },
+    {
+      "sender": "5555A",
+      "receiver": "84652B",
+      "amount": 100,
+      "transactionDate": "2021-01-10T17:42:18.898Z",
+      "id": 8,
+      "remarks": "debit succesfull and your balance is 100430",
+      "type": "debit"
+    },
+    {
+      "sender": "5555A",
+      "receiver": "84652B",
+      "amount": 10,
+      "transactionDate": "2021-01-16T17:42:18.898Z",
+      "id": 9,
+      "remarks": "debit succesfull and your balance is 100420",
+      "type": "debit"
+    },
+    {
+      "sender": "5555A",
+      "receiver": "84652B",
+      "amount": 1000,
+      "transactionDate": "2021-01-18T17:42:18.898Z",
+      "id": 10,
+      "remarks": "debit succesfull and your balance is 100420",
+      "type": "debit"
+    },
+    {
+      "sender": "5555A",
+      "receiver": "84652B",
+      "amount": 1000,
+      "transactionDate": "2021-01-20T17:42:18.898Z",
+      "id": 11,
+      "remarks": "debit succesfull and your balance is 99420",
+      "type": "debit"
+    },
+    {
+      "sender": "5555A",
+      "receiver": "84652B",
+      "amount": 1000,
+      "transactionDate": "2021-01-20T17:42:18.898Z",
+      "id": 12,
+      "remarks": "debit succesfull and your balance is 98420",
+      "type": "debit"
+    },
+    {
+      "sender": "123457A",
+      "receiver": "123457A",
+      "amount": 100,
+      "transactionDate": "2021-01-23T21:15:03.547Z",
+      "id": 13,
+      "remarks": "credit succesfull and your balance is 85920",
+      "type": "credit"
+    },
+    {
+      "sender": "123457A",
+      "receiver": "123457A",
+      "amount": 100,
+      "transactionDate": "2021-01-23T21:15:03.547Z",
+      "id": 14,
+      "remarks": "credit succesfull and your balance is 86020",
+      "type": "credit"
+    },
+    {
+      "sender": "6514CF",
+      "receiver": "6514CF",
+      "amount": 250,
+      "transactionDate": "2021-01-23T21:19:55.952Z",
+      "id": 15,
+      "remarks": "credit succesfull and your balance is 25250",
+      "type": "credit"
+    },
+    {
+      "sender": "6514CF",
+      "receiver": "84652B",
+      "amount": 250,
+      "transactionDate": "2021-01-23T21:19:55.952Z",
+      "id": 16,
+      "remarks": "debit succesfull and your balance is 25000",
+      "type": "debit"
+    },
+    {
+      "sender": "84652B",
+      "receiver": "84652B",
+      "amount": 1000,
+      "transactionDate": "2021-01-27T18:59:41.675Z",
+      "type": "credit",
+      "remarks": "credit successfull and your balance is 96250",
+      "id": 17
+    },
+    {
+      "sender": "84652B",
+      "receiver": "123457A",
+      "amount": 10,
+      "transactionDate": "2021-01-27T19:00:34.925Z",
+      "type": "debit",
+      "remarks": "debit successfull and your balance is 96240",
+      "id": 18
+    }
+  ]
+}

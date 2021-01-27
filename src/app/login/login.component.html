@@ -1,0 +1,47 @@
+
+    <div class="container">
+        <div class="form-group">Want to go to our home? Click...
+            <button class="btn btn-light" (click)="onHome()">Home</button>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="alert alert-info" style="padding-left: 50px; padding-top: 20px;"><b>Credentials of Admin user...</b><br>
+                Username: gsp<br>
+                Password: haigsp<br>
+                </div>
+                <div class="alert alert-info" style="padding-left: 50px;"><b>Credentials of Normal user...</b><br>
+                    Username: sankar<br>
+                    Password: haisankar<br>
+                    </div>
+                    <div class="alert alert-info" style="padding-left: 50px;"><b>Credentials of user who registered but not authorized...</b><br>
+                        Username: sree<br>
+                        Password: sreehai<br>
+                        </div>
+                        <div class="alert alert-danger" style="padding-left: 50px;"><b>For others who are not registered login won't work...</b><br></div>
+                <div><h2>Login Form</h2></div>
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                      <label for="userName">Username</label>
+                      <input type="text" formControlName="userName"  class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.userName.errors }" />
+                         <div *ngIf="submitted && f.userName.errors" class="invalid-feedback">
+                             <div *ngIf="f.userName.errors.required">Username is required</div>
+                        </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" formControlName="password" class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                    <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" >Login</button>
+            </div>
+            <div class="form-group">Do not have a account?? No worries please register here..
+                <button class="btn btn-primary" (click)="onRegister()">Register</button>
+            </div>
+            
+        </form>
+            </div></div>
+    </div>

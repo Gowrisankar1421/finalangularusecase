@@ -1,0 +1,12 @@
+h2{
+    padding-top: 10px;
+    height: 50px;
+    width: 800px;
+    color: black;
+}
+label{
+    color:rgb(247, 195, 195);
+    width: 150px;
+    font-size: large;
+    font-weight: 500;
+}

@@ -1,0 +1,49 @@
+
+    <div class="container">
+        <nav class="navbar navbar-expand bg-light">
+            <div class="navbar-collapse collapse">
+              <ul class="navbar-nav mr-auto">
+                  
+                <a class="nav-item nav-link" (click)="navBack()" style="padding-top: 10px;background-color: lightgray;border-radius: 1em;">back</a>
+              </ul>
+            </div>
+            </nav>
+            <div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2>Transaction Form</h2>
+                <form [formGroup]="transactionForm" (ngSubmit)="onSubmit()">
+                    <!-- <div class="form-group">
+                      <label for="senderNumber">Sender Account Number</label>
+                      <input type="text" formControlName="senderNumber"  [value]="user.bankAccountNumber" class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.senderNumber.errors }" disabled />
+                         <div *ngIf="submitted && f.senderNumber.errors" class="invalid-feedback">
+                             <div *ngIf="f.senderNumber.errors.required">SenderNumber is required</div>
+                        </div>
+            </div> -->
+            <label for="controlTransaction">Select Type of Transaction:</label>
+            <select formControlName="transactionControl" id="controlTransaction" placeholder="select credit or debit" ng-model="transType" (change)="selectInput($event)">
+                <option value="credit" selected> credit</option>
+                <option value="debit"> debit</option>
+
+            </select>
+ 
+            <div class="form-group" id="recAcc" ng-hide="transType=='credit'" *ngIf="isDebitSelected">
+                <label for="receiverNumber">Receiver Account Number</label>
+                <input type="text" formControlName="receiverNumber"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.receiverNumber.errors }" />
+                <div *ngIf="submitted && f.receiverNumber.errors" class="invalid-feedback">
+                    <div *ngIf="f.receiverNumber.errors.required">ReceiverNumber is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="transferAmount">Transfer Amount</label>
+                <input type="number" formControlName="transferAmount" class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.transferAmount.errors }" />
+                <div *ngIf="submitted && f.transferAmount.errors" class="invalid-feedback">
+                    <div *ngIf="f.transferAmount.errors.required">Amount is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" >Transfer</button>
+            </div>
+        </form>
+            </div></div>
+    </div>
