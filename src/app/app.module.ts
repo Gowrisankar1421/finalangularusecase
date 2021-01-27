@@ -28,8 +28,7 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
 
 const appRoutes : Routes =[
   {path:'home',component:HomeComponent},
-  {path:'',component:HomeComponent},
-  {path:'**',component:HomeComponent}, 
+  {path:'',component:HomeComponent}, 
   {path:'login',component:LoginComponent},
   {path:'home/login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
